@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: Home_EscolhaProduto.html");
         exit;
     } else {
-        header("Location: EntradaAcessoProduto.html?erro=1");
+        header("Location: Index.html?erro=1");
         exit;
     }
 }

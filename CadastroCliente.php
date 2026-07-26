@@ -22,51 +22,50 @@ try {
         $estado = $_POST['estado'];
         $uf = $_POST['uf'];
 
-            if (empty($nome) || empty($data_nascimento) || empty($cpf) || empty($email) || empty($telefone) || empty($senha)) {
-        die("Preencha todos os campos obrigatórios.");
-    }
-    //Comando SQL
-    $sql1 = "INSERT INTO cadastro_cliente (nome_cliente, data_nascimento_cliente, cpf, email_cliente, telefone_cliente, sexo, senha) 
+        if (empty($nome) || empty($data_nascimento) || empty($cpf) || empty($email) || empty($telefone) || empty($senha)) {
+            die("Preencha todos os campos obrigatórios.");
+        }
+        //Comando SQL
+        $sql1 = "INSERT INTO cadastro_cliente (nome_cliente, data_nascimento_cliente, cpf, email_cliente, telefone_cliente, sexo, senha) 
     VALUES (:nome_cliente, :data_nascimento_cliente, :cpf, :email, :telefone_cliente, :sexo, :senha)";
 
-    //Prepara a query para execução
-    $stmt1 = $pdo->prepare($sql1);
-    //Executa com os valores
-    $stmt1->execute([
-        ':nome'=> $nome,
-        ':data_nascimento'=> $data_nascimento,
-        ':cpf'=> $cpf,
-        ':email'=> $email,
-        ':telefone'=> $telefone,
-        ':sexo'=> $sexo,
-        ':senha'=> $senha
-    ]); 
+        //Prepara a query para execução
+        $stmt1 = $pdo->prepare($sql1);
+        //Executa com os valores
+        $stmt1->execute([
+            ':nome' => $nome,
+            ':data_nascimento' => $data_nascimento,
+            ':cpf' => $cpf,
+            ':email' => $email,
+            ':telefone' => $telefone,
+            ':sexo' => $sexo,
+            ':senha' => $senha
+        ]);
 
-    //Encontra a Id gerada automaticamento no banco de dados
-    $id_cliente = $pdo->lastInsertId();
+        //Encontra a Id gerada automaticamento no banco de dados
+        $id_cliente = $pdo->lastInsertId();
 
         if (empty($endereco) || empty($cidade) || empty($cep) || empty($pais) || empty($estado) || empty($uf)) {
-        die("Preencha todos os campos obrigatórios.");
-    }
-     $sql2 = "INSERT INTO endereco_cliente (id_cliente, endereco, numero, cidade, cep, pais, estado, uf) 
+            die("Preencha todos os campos obrigatórios.");
+        }
+        $sql2 = "INSERT INTO endereco_cliente (id_cliente, endereco, numero, cidade, cep, pais, estado, uf) 
      VALUES (:id_cliente, :endereco, :numero, :cidade, :cep, :pais, :estado, :uf)";
 
-    $stmt2 = $pdo->prepare($sql2);
-    $stmt2->execute([
-        ':id_cliente'=> $id_cliente,
-        ':endereco'=> $endereco,
-        ':numero'=> $numero,
-        ':cidade'=> $cidade,
-        ':cep'=> $cep,
-        ':pais'=> $pais,
-        ':estado'=> $estado,
-        ':uf'=> $uf
-    ]);
+        $stmt2 = $pdo->prepare($sql2);
+        $stmt2->execute([
+            ':id_cliente' => $id_cliente,
+            ':endereco' => $endereco,
+            ':numero' => $numero,
+            ':cidade' => $cidade,
+            ':cep' => $cep,
+            ':pais' => $pais,
+            ':estado' => $estado,
+            ':uf' => $uf
+        ]);
 
-        header("Location: EntradaAcessoProduto.html");
+        header("Location: Index.html");
         exit;
-        }    
+    }
 } catch (PDOException $e) {
-            die("Erro ao salvar os dados. Verifique se os campos foram todos preenchidos.");
-        }
-?>
+    die("Erro ao salvar os dados. Verifique se os campos foram todos preenchidos.");
+}
