@@ -1,0 +1,82 @@
+/*Estilo da fonte, direcionando para a página inteira */
+* body * {
+  font-family: "Poppins", sans-serif;
+}
+
+/*Ajuste e estilo do fundo da página */
+body {
+  background-image: url(./Imagens/gradiente-azul-claro-fundo.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+/*Para poder dar mais destaque para o texto e o login (campos) e os botôes, foi colocado uma faixa horizontalmente de um tom mais escuro que o do fundo*/
+.inicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 230px;
+  height: 100vh;
+  padding: 0px 0px 0px 200px;
+}
+
+/*Ajuste imagem lateral esquerdo*/
+.imagem img {
+  width: 490px;
+  border-radius: 10px;
+  border: 10px solid white;
+}
+/*Ajuste da cor, fonte e tonalidade dos textos principais, incluindo o cabeçalho*/
+.texto {
+  border: 2px solid black;
+  padding: 350px;
+  width: 390px;
+  background: linear-gradient(to bottom, #d9f0ff, #a8d8ff);
+}
+/*Ajuste do tamanho, preenchimento e largura do texto do título, h1*/
+.texto h1 {
+  font-size: 43px;
+  word-break: break-all;
+  padding-top: 50px;
+}
+/*Ajuste do tamanho, margem do texto do parágrafo, p*/
+.texto p {
+  margin: 0px 0px 50px 105px;
+  font-size: 20px;
+}
+/*Ajuste o tamanho, preenchimento, borda, cor e tempo do formulário, partes input e label */
+.formulario input {
+  font-size: 20px;
+  width: 250px;
+  padding: 8px 0px -2px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.formulario label {
+  font-size: 20px;
+}
+/*Ajuste o fundo, tamanho, cor, preenchimento, borda, cursor e tempo da interação, diretamente no button*/
+button {
+  background: #0b7fd8e2;
+  color: #fff;
+  margin: 10px 10px 0px 0px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+/*Ajuste o tamanho, preenchimento, borda parágrafo de baixo do login*/
+.acesso {
+  width: 600px;
+  padding: 50px 0px 0px 0px;
+  margin: 0px 500px 0px 0px;
+}

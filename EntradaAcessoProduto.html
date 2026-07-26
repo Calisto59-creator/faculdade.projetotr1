@@ -1,0 +1,83 @@
+<!doctype html>
+<!-- Para informar qual idioma que desenvolvedor quer utilizar-->
+<html lang="pt-br">
+  <!--Nessa parte, a função head funciona para colocarmos metadados e instrue o navegador e o mecanismo de busca como carregar, processar e exibir-->
+  <head>
+    <!--Esse código link entre a tag head, foi buscado no site do Google Fonte, para que possa ser alterado a fonte do corpo do projeto-->
+    <!--A fonte utilizada foi Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Título-->
+    <title>Project Estácio</title>
+    <link rel="stylesheet" href="EntradaAcessoProduto.css" />
+  </head>
+
+  <!-- Corpo do site-->
+  <body>
+    <!-- Div aberta para edição de estilo do corpo do e-mail (texto e formulário)-->
+    <div class="inicio">
+      <!-- Div aberta para edição da imagem de fundo-->
+      <div class="imagem">
+        <img
+          src="./Imagens/arranjo-de-colecao.avif"
+          alt="IlustrativoFundoAzuleBrancoI"
+        />
+      </div>
+      <!-- Div aberta para ajustar o visual do texto príncipal-->
+      <div class="texto">
+        <h1>Venha conhecer nossos produtos</h1>
+        <br /><br />
+
+        <p>Acesse agora</p>
+
+        <div class="formulario">
+          <!--Formulário - Entrada de clientes, Login e Senha-->
+          <!--Required faz com o que o campo vire obrigatório o preenchimento pelo usuário-->
+          <form id="formulario" action="EntradaAcessoProduto.php" method="POST">
+            <label for="usuario">Login:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Digite seu e-mail"
+              required
+            />
+            <br /><br />
+            <label for="senha">Senha:</label>
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              placeholder="********"
+              required
+            />
+            <br />
+            <br />
+
+            <!--Botões ao clicar direcionar para outra página do site-->
+            <button type="submit">Entrar</button>
+            <button type="reset">Limpar</button>
+            <br /><br />
+
+            <!--Usuário entra no site e precisa fazer o primeiro login. Apertando o "Cadastre-se", levará para a página de cadastro-->
+            <div class="acesso">
+              <p>
+                Não tem acesso?<a
+                  href="http://localhost/Projeto_Trabalho/CadastroCliente.html"
+                >
+                  Cadastre-se</a
+                >
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="EntradaAcessoProduto.js"></script>
+  </body>
+</html>

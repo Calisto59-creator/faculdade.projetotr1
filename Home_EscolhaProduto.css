@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body * {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-image: url(./Imagens/gradiente-azul-escuro-fundo.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.container {
+  max-width: 1850px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  min-height: 900px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #003366;
+  color: #ffffff;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+header .titulo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+header .usuario-logado a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+header .usuario-logado a:hover {
+  text-decoration: underline;
+}
+
+/* Área principal: menu + conteúdo */
+.main {
+  display: flex;
+  flex: 1;
+}
+
+/* Menu lateral */
+.sidebar {
+  width: 180px;
+  background-color: #e6e6e6;
+  border-right: 1px solid #ccc;
+  padding-top: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.sidebar li a {
+  text-decoration: none;
+  color: #333333;
+  display: block;
+}
+
+.sidebar li a:hover {
+  background-color: #d4d4d4;
+}
+
+/* Conteúdo */
+.content {
+  flex: 1;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.content h1 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.content p {
+  margin-bottom: 8px;
+}
+
+.coluna label {
+  display: block;
+  margin-top: 10px;
+}
+
+.coluna input,
+.coluna select {
+  width: 100%;
+  padding: 6px 8px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea {
+  width: 350px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 0px;
+  transition: 0.2s;
+  margin: 0px;
+  font-size: 15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+}
+
+.form-container {
+  font-size: 15px;
+  width: 1000px;
+  height: 500px;
+  padding: 8px 0px -2px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.menu-usuario {
+  font-size: 18px;
+  width: 1000px;
+  height: 500px;
+  padding: 8px 0px -2px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+button {
+  background: #0b7fd8e2;
+  color: #fff;
+  margin: 10px 10px 0px 0px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.container-imagens {
+  display: flex;
+  gap: 150px;
+  padding: 50px 0px 0px 80px;
+  justify-content: flex-start;
+}
+
+.excluir {
+  font-size: 15px;
+}
+.excluir button {
+  background-color: silver;
+}
