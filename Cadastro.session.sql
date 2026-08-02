@@ -1,1 +1,1 @@
-SELECT * FROM cadastro_cliente
+SELECT * FROM endereco_cliente

@@ -1,6 +1,5 @@
-<?php 
+<?php
 session_start();
 session_destroy();
-header("Location: EntradaAcessoProduto.php");
+header("Location: entrada_acesso.php");
 exit;
-?>

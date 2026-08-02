@@ -2,11 +2,11 @@
 
 $id = $_GET["id"];
 
-require_once 'Conexao.php';
-$deletar="DELETE FROM cadastro_cliente WHERE id=$id";
+require_once 'conexao.php';
+$deletar = "DELETE FROM cadastro_cliente WHERE id=$id";
 
-if($deletar) {
+if ($deletar) {
     echo "O registro foi excluido";
-} else{
+} else {
     echo "Infelizmente coitado de você, tente novamente";
 }

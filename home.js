@@ -46,7 +46,7 @@ const paginas = {
       <p> Gostaria de nos contar o que você procura? </p>
       <br>
 
-      <form action="Home_EscolhaProduto.php" method="POST">
+      <form action="home2.php" method="POST">
       <input type="hidden" name="acao" value="inserir">
 
       <label for="item">Tipo de Produto:</label>
@@ -100,12 +100,12 @@ const paginas = {
 
       <a href="#" id="btnAcessos">Listagem de Acessos</a>
       
-      <div class-"modal fade" id="modalAcessos" tabindex="-1" aria-labelledby="modalAcessosLabel" aria-hidden="true">
+      <div class="modal fade" id="modalAcessos" tabindex="-1" aria-labelledby="modalAcessosLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
       <div class="modal-content">
       <div class="modal-header">
       <h5 class="modal-title" id="modalAcessosLabel">Histórico de Acessos</h5>
-      <button type="button" class="btn-close" data-bs-dimiss="modal" aria-label="Close"></button>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
       <div id="conteudoAcessos">
@@ -124,7 +124,7 @@ const paginas = {
      <h1>Alteração de Dados</h1>
    <p>Caso queira alterar alguma informação cadastrada, selecione a opção que queira alterar e informe no campo ao lado o novo dado, em seguida aperte "alterar".</p>
    <br>
-     <form action="Home_EscolhaProduto_(Alteracao).php" method="POST">  
+     <form action="home_(alteracao).php" method="POST">  
      <input type="hidden" name="acao" value="alterar">
 
      <label for="alteracao">Alteração:</label>
@@ -153,7 +153,7 @@ const paginas = {
     <p>Este menu permite que você solicite a exclusão permanente da sua conta e de todos os dados associados ao seu cadastro. Ao confirmar a exclusão, seu acesso será encerrado
     e não será possível recuperar as informações posteriormente. Caso tenha certeza de que deseja prosseguir, clique no botão abaixo.</p>
 
-    <button> <a href=Home_EscolhaProduto_(Exclusao).php?id=$id">Excluir</a> </button>
+    <button> <a href="home_(exclusao).php?id=$id">Excluir</a> </button>
 </div>
   `
 };
@@ -174,7 +174,7 @@ document.querySelectorAll(".sidebar a").forEach((link) => {
 function carregarMenu(usuario) {
   document.getElementById("conteudo").innerHTML = paginas[usuario];
 
-  if (usuario === "usuarios") {
+  if (usuario === "usuario") {
     const modalEl = document.getElementById("modalAcessos");
     const modalAcessos = new bootstrap.Modal(modalEl);
 
@@ -188,7 +188,7 @@ function carregarMenu(usuario) {
         '<div class="text-center"><div class="spinner-border text-primary" role="status"></div><br>Buscando dados...</div>';
 
       //Faz a requisição assincrina para PHP
-      fetch("Home_EscolhaProduto2.php")
+      fetch("home2.php")
         .then((response) => {
           if (!response.ok) {
             throw new Error("Erro na rede ou arquivo não encontrado");

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "Conexao.php";
+require_once "conexao.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
@@ -16,10 +16,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['logado'] = true;
         $_SESSION['usuario_id'] = $usuario['id_cliente'];
 
-        header("Location: Home_EscolhaProduto.html");
+        header("Location: home.html");
         exit;
     } else {
-        header("Location: Index.html?erro=1");
+        header("Location: entrada_acesso.html?erro=1");
         exit;
     }
 }

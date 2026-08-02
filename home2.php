@@ -3,11 +3,11 @@
 session_start();
 
 if (!isset($_SESSION['logado'])) {
-    header("Location: Home_EscolhaProduto.html");
+    header("Location: home.html");
     exit;
 }
 
-require_once 'Conexao.php';
+require_once 'conexao.php';
 
 try {
     //Veirifica se os dados foram enviados via POST
@@ -31,7 +31,7 @@ try {
             ':quantidade' => $quantidade,
             ':valor_pretendido' => $valor
         ]);
-        header("Location: Home_EscolhaProduto.html");
+        header("Location: home.html");
         exit;
     }
 } catch (PDOException $e) {

@@ -1,6 +1,6 @@
 <?php
 
-require_once 'Conexao.php';
+require_once 'conexao.php';
 
 try {
     //Veirifica se os dados foram enviados via POST
@@ -63,7 +63,7 @@ try {
             ':uf' => $uf
         ]);
 
-        header("Location: Index.html");
+        header("Location: entrada_acesso.html");
         exit;
     }
 } catch (PDOException $e) {
