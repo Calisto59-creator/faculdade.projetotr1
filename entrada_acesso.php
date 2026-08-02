@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: home.html");
         exit;
     } else {
-        header("Location: entrada_acesso.html?erro=1");
+        header("Location: index.html?erro=1");
         exit;
     }
 }

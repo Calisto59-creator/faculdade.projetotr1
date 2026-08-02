@@ -63,7 +63,7 @@ try {
             ':uf' => $uf
         ]);
 
-        header("Location: entrada_acesso.html");
+        header("Location: index.html");
         exit;
     }
 } catch (PDOException $e) {
